@@ -3,9 +3,9 @@
 ## Overview
 Mutex is a package implemented to control access to a shared resources or code executed by multiple threads.
 
-The purpose of a semaphore is to synchronize access to critical sections of your code. This is achieved by blocking access to other threads until the thread currently interacting with the resource has finished. Once completed, control is released, and the next waiter gains access to the resource.
+The purpose of a mutex is to synchronize access to critical sections of your code. This is achieved by blocking access to other threads until the thread currently interacting with the resource has finished. Once completed, control is released, and the next waiter gains access to the resource.
 
-Though JavaScript is technically single-threaded, it supports asynchronous activities, hence the need to prevent race conditions where two different paths of execution vie for the same resource.
+Although JavaScript is technically single-threaded, it supports asynchronous activities, hence the need to prevent race conditions where two different paths of execution vie for the same resource.
 
 A common use-case surfaces in React.js when multiple components depend on configuration information from a server (e.g., feature flags). Without some form of synchronization, multiple components can generate identical server requests simultaneously, creating unnecessary server load. By utilizing a semaphore, you can prevent subsequent access to the call to the server until the response returns. Any waiting components (those blocked) can then utilize the locally cached configuration, thus eliminating superfluous server traffic.
 
@@ -20,17 +20,17 @@ Install via npm:
 
 **CommonJS:**
 ```javascript
-const {Mutex} = require('@kuzmycz/semaphore');
+const {Mutex} = require('@kuzmycz/mutex');
 ```
 
 **ES6:**
 ```javascript
-import {Mutex} from '@kuzmycz/semaphore';
+import {Mutex} from '@kuzmycz/mutex';
 ```
 
 **TypeScript:**
 ```typescript
-import { Mutex } from 'async-mutex';
+import { Mutex } from 'mutex';
 ```
 
 ## API

@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48ceed5-2482-4ae1-bdc2-dec1451879a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/mutex.test.ts" afterDir="false" />
+    <list default="true" id="f48ceed5-2482-4ae1-bdc2-dec1451879a5" name="Changes" comment="Renamed to mutex. Semaphores will come later">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semaphore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mutex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/semaphore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mutex.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/semaphore.test.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +76,17 @@
       <updated>1708291951496</updated>
       <workItem from="1708291952721" duration="1822000" />
       <workItem from="1708375793025" duration="25457000" />
-      <workItem from="1712010685520" duration="237000" />
+      <workItem from="1712010685520" duration="508000" />
     </task>
+    <task id="LOCAL-00001" summary="Renamed to mutex. Semaphores will come later">
+      <option name="closed" value="true" />
+      <created>1712010971402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712010971403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Renamed to mutex. Semaphores will come later" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed to mutex. Semaphores will come later" />
   </component>
 </project>
