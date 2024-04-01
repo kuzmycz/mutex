@@ -1,18 +1,18 @@
-type SemaphoreRelease = () => void;
+type MutexRelease = () => void;
 
 function log(method: string, message: string) {
     console.debug(`Semaphore::${method} ${message}`);
 }
 
 /**
- * A Semaphore control access to a critical resource by allowing only one thread to access
+ * A Mutex control access to a critical resource by allowing only one thread to access
  * the resource a time. When the thread id finished with the resource it releases control
  * of the semaphore and the next waiter is given control.
  *
  */
-export class Semaphore {
+export class Mutex {
     private lock: boolean = false;
-    private queue: { (release: SemaphoreRelease): void }[] = [];
+    private queue: { (release: MutexRelease): void }[] = [];
     debug: boolean;
 
     constructor(options?: {debug: boolean}) {
@@ -47,7 +47,7 @@ export class Semaphore {
      *
      * @see #release
      */
-    acquire(): Promise<SemaphoreRelease> {
+    acquire(): Promise<MutexRelease> {
         if (this.lock) {
             if (this.debug) log("acquire", "Locked!");
 

@@ -1,7 +1,7 @@
-# Semaphore
+# Mutex
 
 ## Overview
-Semaphore is a package implemented to control access to a shared resources or code executed by multiple threads.
+Mutex is a package implemented to control access to a shared resources or code executed by multiple threads.
 
 The purpose of a semaphore is to synchronize access to critical sections of your code. This is achieved by blocking access to other threads until the thread currently interacting with the resource has finished. Once completed, control is released, and the next waiter gains access to the resource.
 
@@ -20,26 +20,26 @@ Install via npm:
 
 **CommonJS:**
 ```javascript
-const {Semaphore} = require('@kuzmycz/semaphore');
+const {Mutex} = require('@kuzmycz/semaphore');
 ```
 
 **ES6:**
 ```javascript
-import {Semaphore} from '@kuzmycz/semaphore';
+import {Mutex} from '@kuzmycz/semaphore';
 ```
 
 **TypeScript:**
 ```typescript
-import { Semaphore } from 'async-mutex';
+import { Mutex } from 'async-mutex';
 ```
 
 ## API
 ###Create a new semaphore:
 ```typescript
-const semaphore = new Semaphore();
+const semaphore = new Mutex();
 ```
 
-### Secure a code section with Semaphore:
+### Secure a code section with Mutex:
 
 ```typescript
 const release = await semaphore.acquire();
@@ -65,4 +65,4 @@ semaphore.acquire().then((release) => {
 
 
 ## Design philosophy
-Semaphore is designed to be user-friendly, weightless, with superior performance and dependency-free.
+Mutex is designed to be user-friendly, weightless, with superior performance and dependency-free.
